@@ -1,0 +1,57 @@
+/* =============================================================================
+   Proxima Digital — Responsive utilities
+   Imported after global.css to add small-screen refinements
+   ============================================================================= */
+
+@media (max-width: 768px) {
+  html {
+    font-size: 0.98rem;
+  }
+
+  /* Reduce hero title sizes more aggressively on mobile */
+  .section-container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 0.95rem;
+  }
+}
+
+/* Make sure long text never overflows cards on tablets */
+@media (max-width: 1024px) {
+  .text-balance,
+  .text-pretty {
+    text-wrap: balance;
+  }
+}
+
+/* Hide scrollbars on horizontal scroll lists for a cleaner mobile feel */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Improved focus visibility for keyboard users */
+*:focus-visible {
+  outline: 2px solid #8b00ff;
+  outline-offset: 2px;
+}
+
+/* Reduce motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
